@@ -1,0 +1,78 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-around;
+  height: 90vh;
+  box-shadow: 5px 5px rgb(102, 51, 153);
+  max-width: 1024px;
+  width: 90vw;
+}
+
+.numericInput {
+  width: 64px;
+}
+
+.checkInput {
+  width: 64px;
+}
+
+form {
+  color: rgb(102, 51, 153);
+  font-size: large;
+  font-weight: bold;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.subBtn {
+  margin: 15px;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  border-radius: 100%;
+  background-color: rgb(102, 51, 153);
+  font-weight: bold;
+  &:hover {
+    background-color: lightgreen;
+  }
+}
+
+.innerWrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  > input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    transition: border-color 0.3s ease;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    &:focus {
+      outline: none;
+      border-color: rgb(102, 51, 153);
+      box-shadow: 0 0 5px rgba(102, 51, 153, 0.5);
+    }
+  }
+  > textarea {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    transition: border-color 0.3s ease;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    &:focus {
+      outline: none;
+      border-color: rgb(102, 51, 153);
+      box-shadow: 0 0 5px rgba(102, 51, 153, 0.5);
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.cards {
+  box-shadow: 5px 5px rgb(102, 51, 153);
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+  @media (min-width: 768px) {
+    width: 45vw;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: pink;
+  }
+}
+
+button {
+  border-radius: 10px;
+  height: 40px;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+body {
+  background-color: rgb(160, 113, 206);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.innerDiv {
+  width: 100%;
+  text-align: start;
+  margin-left: 15px;
+}
+.delBtn {
+  margin: 15px;
+  color: white;
+  width: 40px;
+  height: 38px;
+  font-size: 30px;
+  border-radius: 100%;
+  background-color: rgb(160, 113, 206);
+  font-weight: bold;
+  &:hover {
+    color: red;
+  }
+}

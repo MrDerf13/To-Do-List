@@ -1,0 +1,39 @@
+.header {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addBtn {
+  right: 1px;
+  margin: 15px;
+  color: rgb(102, 51, 153);
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  border-radius: 100%;
+  background-color: gold;
+  font-weight: bold;
+  &:hover {
+    background-color: darkcyan;
+    color: gold;
+  }
+}
+input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  margin-left: 20px;
+  transition: border-color 0.3s ease;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  &:focus {
+    outline: none;
+    border-color: rgb(102, 51, 153);
+    box-shadow: 0 0 5px rgba(102, 51, 153, 0.5);
+  }
+}
