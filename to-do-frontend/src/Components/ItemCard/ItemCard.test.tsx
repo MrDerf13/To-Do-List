@@ -1,5 +1,6 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import ItemCard from "./ItemCard";
+import { BrowserRouter } from "react-router-dom";
 
 const dummyData = {
   completed: false,
@@ -10,14 +11,23 @@ const dummyData = {
   title: "checkity check",
 };
 
-const renderItemCard = () => {
-  return render(<ItemCard key={14} obj={dummyData} />);
-};
-
-describe("ItemCard Tests", () => {
-  it("Should successfully render an ItemCard", () => {
-    const rendered = renderItemCard();
-    const rendArticle = rendered.findAllByRole("article");
-    expect(rendArticle).toBeDefined;
+describe("Rendering tests", () => {
+  it("renders an ItemCard", () => {
+    render(
+      <BrowserRouter>
+        <ItemCard key={14} obj={dummyData} />
+      </BrowserRouter>
+    );
+    const cardWrapper = screen.getByRole("article");
+    expect(cardWrapper).toBeDefined();
+  });
+  it("renders an ItemCard with given data", () => {
+    render(
+      <BrowserRouter>
+        <ItemCard key={14} obj={dummyData} />
+      </BrowserRouter>
+    );
+    const titelData = screen.getByText("checkity check");
+    expect(titelData).toBeDefined();
   });
 });

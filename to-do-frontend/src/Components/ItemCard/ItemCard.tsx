@@ -19,6 +19,7 @@ const ItemCard: React.FC<ItemCardProps> = ({ obj }) => {
       <div
         className={styles.innerDiv}
         onClick={() => navigator(`edit/${obj.id}`)}
+        data-testid="clickable-div"
       >
         <h3>{obj.title}</h3>
         <p>
